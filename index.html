@@ -11,8 +11,8 @@
 </head>
 <body>
   <div class="container-fluid">
-    <!-- <a class="btn btn-primary" onClick="addNested()" href="#">Add Widget</a>
-    <a class="btn btn-primary" onClick="addNewWidget('.sub1')" href="#">Add Widget Grid1</a>
+    <a class="btn btn-primary" onClick="addNested()" href="#">Add Product</a>
+    <!-- <a class="btn btn-primary" onClick="addNewWidget('.sub1')" href="#">Add Widget Grid1</a>
     <a class="btn btn-primary" onClick="addNewWidget('.sub2')" href="#">Add Widget Grid2</a>
     <span>entire save/re-create:</span>
     <a class="btn btn-primary" onClick="save()" href="#">Save</a>
@@ -29,7 +29,7 @@
   <script src="events.js"></script>
   <script type="text/javascript">
     let sub1 = [ {x:0, y:0}, {x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:0, y:1}, {x:1, y:1}];
-    let sub2 = [ {x:0, y:0}, {x:0, y:2, w:2}];
+    let sub2 = [ {x:0, y:0}, {x:0, y:2, w:1, h:1}];
     let count = 0;
     [...sub1, ...sub2].forEach(d => d.content = String(count++));
     let subOptions = {
@@ -40,7 +40,7 @@
     };
     let options = { // main grid options
       cellHeight: 50,
-      margin: 5,
+      margin: 0.5,
       minRow: 2, // don't collapse when empty
       disableOneColumnMode: true,
       acceptWidgets: true,
@@ -63,7 +63,7 @@
     })
 
     function addNested() {
-      grid.addWidget({x:0, y:100, content:"new item"});
+      grid.addWidget({x:0, y:100, content:"new product"});
     }
 
     function addNewWidget(selector) {
